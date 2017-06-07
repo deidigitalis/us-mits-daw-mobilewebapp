@@ -1,4 +1,5 @@
 ﻿<!DOCTYPE html>
+%
 <html>
 <head>
   <!--
@@ -15,6 +16,14 @@
   <link rel="stylesheet" type="text/css" href="css/index.css" />
   <link rel="shortcut icon" href="images/favico.ico">
   <title>MobileWebApp</title>
+  <style type="text/css">
+    .ui-page {
+      background: transparent url(images/world.svg);
+      background-size: 90%;
+      background-repeat: no-repeat;
+      background-position-y: center
+    }
+  </style>
 </head>
 <body>
   <div class="app">
@@ -27,8 +36,20 @@
         <a href="#historyPage" class="ui-btn-right ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-right ui-icon-info" data-transition="fade">History</a>
       </div>
       <div data-role="main" id="mainTrackingPage" class="ui-content">
-        <p>Latitude: <span id="latitude" /></p>
-        <p>Longitude: <span id="longitude" /></p>
+        <table data-role="table" data-mode="" class="ui-responsive table-stroke">
+          <thead>
+            <tr>
+              <th data-priority="1">Latitude</th>
+              <th data-priority="2">Longitude</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th><span id="latitude" /></th>
+              <td><span id="longitude" /></td>
+            </tr>
+          </tbody>
+        </table>
       </div>
       <div data-role="footer"><h4>© 2017 Pablo Caballero</h4></div>
     </div>
